@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhatsAppBookingHandlers();
   initStickyNavbar();
   initSmoothScroll();
+  initMobileMenus();
 });
 
 /* ==========================================================================
@@ -38,6 +39,31 @@ function initStickyNavbar() {
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // run once on load
+}
+
+/* ==========================================================================
+   0b.5 Mobile Hamburger Menus
+   ========================================================================== */
+function initMobileMenus() {
+  function toggleMenu(btnId, menuId) {
+    const btn = document.getElementById(btnId);
+    const menu = document.getElementById(menuId);
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Close menu when any link inside is clicked
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  }
+
+  toggleMenu('hero-menu-btn', 'hero-mobile-menu');
+  toggleMenu('sticky-menu-btn', 'sticky-mobile-menu');
 }
 
 /* ==========================================================================
