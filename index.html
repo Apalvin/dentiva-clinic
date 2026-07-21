@@ -1,90 +1,1081 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klinik Gigi - Senyum Sempurna Tanpa Rasa Takut</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- App Container -->
-    <div id="app">
-        <header class="hero">
-            <div class="container">
-                <h1>Dapatkan Senyum Sempurna Anda, Tanpa Rasa Takut</h1>
-                <p>Kenyamanan spa berpadu dengan teknologi gigi masa depan.</p>
-                <a href="https://wa.me/085150688320" class="btn-primary" target="_blank">Konsultasi Gratis via WhatsApp</a>
-            </div>
-        </header>
-        <section class="social-proof">
-            <div class="container">
-                <p>⭐⭐⭐⭐⭐ 4.9/5 dari 500+ Pasien di Google Reviews</p>
-            </div>
-        </section>
-        <section class="comfort-care">
-            <div class="container">
-                <h2>Mengapa Memilih Kami?</h2>
-                <div class="grid-3">
-                    <div class="glass-card">
-                        <h3>Painless Technology</h3>
-                        <p>Peralatan canggih untuk meminimalisir rasa sakit dan ngilu.</p>
-                    </div>
-                    <div class="glass-card">
-                        <h3>Spa-like Environment</h3>
-                        <p>Suasana tenang dengan aromaterapi yang menenangkan pikiran.</p>
-                    </div>
-                    <div class="glass-card">
-                        <h3>Transparent Pricing</h3>
-                        <p>Tidak ada biaya tersembunyi. Semua dijelaskan di awal.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="transformation">
-            <div class="container">
-                <h2>Hasil Nyata, Senyum Sempurna</h2>
-                <div class="slider-container" id="before-after-slider">
-                    <!-- Before Image (Background) -->
-                    <div class="img-background"></div>
-                    <!-- After Image (Foreground, clipped) -->
-                    <div class="img-foreground"></div>
-                    <!-- Slider handle -->
-                    <div class="slider-handle"></div>
-                </div>
-            </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <h2>Layanan Kami</h2>
-                <div class="grid-3">
-                    <div class="glass-card">
-                        <h3>Veneer & Whitening</h3>
-                        <p>Tingkatkan estetika senyum Anda.</p>
-                        <a href="https://wa.me/085150688320" class="btn-secondary">Tanya Harga via WA</a>
-                    </div>
-                    <div class="glass-card">
-                        <h3>Invisalign & Kawat Gigi</h3>
-                        <p>Solusi gigi rapi tanpa rasa tidak nyaman.</p>
-                        <a href="https://wa.me/085150688320" class="btn-secondary">Tanya Harga via WA</a>
-                    </div>
-                    <div class="glass-card">
-                        <h3>General Checkup</h3>
-                        <p>Perawatan dasar rutin untuk kesehatan mulut.</p>
-                        <a href="https://wa.me/085150688320" class="btn-secondary">Tanya Harga via WA</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <footer class="final-cta">
-            <div class="container">
-                <h2>Siap Mengubah Senyum Anda Hari Ini?</h2>
-                <p>Hubungi kami, tim kami siap membantu menjawab pertanyaan Anda tanpa komitmen.</p>
-                <a href="https://wa.me/085150688320" class="btn-primary" target="_blank">Konsultasi Gratis via WhatsApp</a>
-            </div>
-        </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentiva — Klinik Gigi Modern & Estetika Senyum Terpercaya</title>
+  <meta name="description"
+    content="Dentiva adalah klinik gigi spesialis terkemuka yang menyediakan layanan perawatan estetika gigi tanpa rasa sakit, implan gigi, behel transparan Invisalign, dan pemutihan gigi laser.">
+
+  <!-- Favicon Matching Logo -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4">
+  <link rel="shortcut icon" href="favicon.svg?v=4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dentivaDark: '#FAFBF7',
+            dentivaSurface: '#F0F7F2',
+            dentivaLime: '#CEF149',
+            dentivaForest: '#162420',
+            dentivaMint: '#A8E6CF',
+            dentivaCream: '#FAFBF7',
+            dentivaTextPrimary: '#162420',
+            dentivaTextSecondary: '#4A5A53',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            serifItalic: ['Instrument Serif', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Force smooth scroll (overrides Tailwind preflight reset) -->
+  <style>
+    html { scroll-behavior: smooth !important; }
+  </style>
+</head>
+
+<body class="bg-[#FAFBF7] text-[#162420] antialiased">
+
+  <!-- ========================================================================== 
+       STICKY NAVBAR (appears after scrolling past hero)
+       ========================================================================== -->
+  <div id="sticky-navbar"
+    class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3 pointer-events-none"
+    style="transform: translateY(-100%); opacity: 0; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;">
+    <nav class="glass-nav max-w-7xl mx-auto rounded-full py-3.5 px-6 flex items-center justify-between shadow-lg">
+      <!-- Brand Logo -->
+      <a href="#home" class="smooth-scroll flex items-center gap-3 text-2xl font-bold font-heading tracking-tight">
+        <img src="assets/images/logo.svg" alt="Dentiva Logo" class="w-9 h-9 rounded-xl shadow">
+        <span class="text-[#162420]">Dentiva<span class="text-[#CEF149]">.</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-[#4A5A53]">
+        <a href="#home" class="smooth-scroll transition hover:text-[#162420]">Beranda</a>
+        <a href="#services" class="smooth-scroll transition hover:text-[#162420]">Perawatan</a>
+        <a href="#transformation" class="smooth-scroll transition hover:text-[#162420]">Hasil Transformasi</a>
+        <a href="#specialists" class="smooth-scroll transition hover:text-[#162420]">Tim Dokter</a>
+        <a href="#faq" class="smooth-scroll transition hover:text-[#162420]">FAQ</a>
+      </div>
+
+      <!-- Book Appointment Button -->
+      <a href="https://wa.me/6285150688320?text=Halo%20Dentiva,%20saya%20ingin%20booking%20jadwal%20konsultasi..."
+        target="_blank" rel="noopener noreferrer"
+        class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold rounded-full py-2.5 px-5 text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
+        <span>Buat Janji Temu</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: LIGHT ORGANIC HERO SECTION
+       ========================================================================== -->
+  <header id="home"
+    class="relative min-h-screen bg-gradient-to-b from-[#EBF7EF] via-[#FAFBF7] to-[#FAFBF7] text-[#162420] flex flex-col justify-between overflow-hidden">
+    <!-- Ambient Light Background Glows -->
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <!-- Floating Frosted Glass Navbar -->
+    <div class="relative z-30 pt-6 px-4 sm:px-8 max-w-7xl mx-auto w-full">
+      <nav class="glass-nav rounded-full py-3.5 px-6 flex items-center justify-between shadow-sm">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 text-2xl font-bold font-heading tracking-tight">
+          <img src="assets/images/logo.svg" alt="Dentiva Logo" class="w-9 h-9 rounded-xl shadow">
+          <span class="text-[#162420]">Dentiva<span class="text-[#CEF149]">.</span></span>
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-[#4A5A53]">
+          <a href="#home" class="text-[#162420] font-semibold transition hover:text-[#162420]">Beranda</a>
+          <a href="#services" class="transition hover:text-[#162420]">Perawatan</a>
+          <a href="#transformation" class="transition hover:text-[#162420]">Hasil Transformasi</a>
+          <a href="#specialists" class="transition hover:text-[#162420]">Tim Dokter</a>
+          <a href="#faq" class="transition hover:text-[#162420]">FAQ</a>
+        </div>
+
+        <!-- Book Appointment Button (Vibrant Bright Lime CTA) -->
+        <a href="https://wa.me/6285150688320?text=Halo%20Dentiva,%20saya%20ingin%20booking%20jadwal%20konsultasi..."
+          target="_blank" rel="noopener noreferrer"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold rounded-full py-2.5 px-5 text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Buat Janji Temu</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+      </nav>
     </div>
-    <script src="js/script.js"></script>
+
+    <!-- Main Hero Body Content -->
+    <div
+      class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 pt-12 pb-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
+
+      <!-- Left Content Column -->
+      <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
+        <!-- Tagline Pill -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-[#D2DFD7] text-xs font-semibold text-[#162420] uppercase tracking-wider shadow-sm">
+          Perawatan & Estetika Gigi Standar Internasional
+        </div>
+
+        <!-- Main Headline (Selective Elegant Italic Accent) -->
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-semibold font-heading leading-[1.08] tracking-tight text-[#162420]">
+          Pancarkan <span
+            class="font-serif-italic text-[#162420] text-5xl sm:text-7xl lg:text-8xl underline decoration-[#CEF149] decoration-4">Senyum</span>
+          Terbaik Anda Bersama Dokter Spesialis
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-[#4A5A53] text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+          Hadirkan perawatan gigi modern presisi tinggi, teknologi bebas rasa sakit, dan kenyamanan personal untuk
+          setiap senyum sehat yang percaya diri.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="https://wa.me/6285150688320?text=Halo%20Dentiva,%20saya%20ingin%20jadwalkan%20konsultasi..."
+            target="_blank" rel="noopener noreferrer"
+            class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold rounded-full py-4 px-8 text-base flex items-center gap-3 shadow-xl hover:-translate-y-0.5 transition-all">
+            <span>Jadwalkan Konsultasi</span>
+            <span class="w-7 h-7 rounded-full bg-white/50 flex items-center justify-center text-xs text-[#162420]"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+
+          <a href="#estimator"
+            class="bg-white hover:bg-[#CEF149] text-[#162420] border-2 border-[#CEF149] rounded-full py-4 px-8 font-bold text-base transition-all flex items-center gap-2 shadow-md">
+            <span>Hitung Estimasi Biaya</span>
+            <i class="fa-solid fa-calculator text-sm text-[#162420]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Column with Floating Social Proof Badge (Animated Counter) -->
+      <div class="lg:col-span-5 relative flex justify-center lg:justify-end reveal-on-scroll delay-200">
+        <div class="relative w-full max-w-md">
+          <!-- Bright Hero Portrait Frame -->
+          <div
+            class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl aspect-[4/5] bg-gradient-to-b from-[#E6F7ED] to-white">
+            <img id="hero-portrait-img" src="assets/images/hero_slide_1.png" alt="Pasien Dentiva Tersenyum Bahagia"
+              class="w-full h-full object-cover transition-all duration-500 ease-in-out transform">
+          </div>
+
+          <!-- Floating Glass Social Proof Badge -->
+          <div
+            class="absolute -bottom-6 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-[#E3EBE6] max-w-xs space-y-3 z-30">
+            <div class="flex items-center justify-between">
+              <div>
+                <p id="hero-badge-number" class="text-2xl font-bold font-heading text-[#162420] counter-element"
+                  data-target="18" data-suffix="K+">18K+</p>
+                <p id="hero-badge-title" class="text-xs text-[#4A5A53]">Pasien Bahagia Terbantu</p>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-[#E8F7F0] flex items-center justify-center text-[#162420]">
+                <i class="fa-solid fa-user-group text-base text-[#162420]"></i>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-1 border-t border-[#E3EBE6]">
+              <!-- Avatar Stack -->
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white"
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop"
+                  alt="Pasien 1">
+                <img class="w-8 h-8 rounded-full border-2 border-white"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop"
+                  alt="Pasien 2">
+                <img class="w-8 h-8 rounded-full border-2 border-white"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop"
+                  alt="Pasien 3">
+              </div>
+              <div class="text-xs text-[#4A5A53] font-medium">
+                <div class="flex text-[#162420] text-[10px]">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span id="hero-badge-rating" class="font-bold text-[#162420]">4.9/5 Rating Kepuasan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Slide Indicator Status Bar (Restored Aesthetic + Clickable & Auto-Play) -->
+    <div
+      class="relative z-20 border-t border-[#E3EBE6] py-4 px-6 sm:px-8 max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between text-xs text-[#4A5A53] font-mono gap-4">
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 rounded-full bg-[#CEF149] animate-pulse"></span>
+        <span id="hero-slide-caption">Senyum Sehat Anda, Prioritas Utama Kami</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span id="hero-slide-counter" onclick="nextHeroSlide()"
+          class="text-[#162420] font-bold cursor-pointer select-none hover:text-[#CEF149] transition">Pratinjau 01 /
+          04</span>
+        <button id="hero-next-btn" type="button" onclick="nextHeroSlide()"
+          class="cursor-pointer hover:text-[#162420] text-[#4A5A53] font-bold transition flex items-center gap-1.5 bg-transparent border-none p-0 outline-none select-none">
+          <span>Lanjut</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+      <div class="hidden md:block">Gulir ke bawah untuk jelajahi perawatan</div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================================================
+       SECTION 2: TRUST BADGES & KEY METRICS COUNTER GRID (Animated Number Counters)
+       ========================================================================== -->
+  <section class="py-16 bg-white border-b border-[#E3EBE6]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <!-- Metric 1 -->
+        <div class="space-y-2 border-l-2 border-[#CEF149] pl-6 reveal-on-scroll">
+          <p class="text-4xl sm:text-5xl font-bold font-heading text-[#162420] counter-element" data-target="18"
+            data-suffix="K+">0K+</p>
+          <p class="text-sm text-[#4A5A53] font-medium">Pasien Terlayani</p>
+        </div>
+
+        <!-- Metric 2 -->
+        <div class="space-y-2 border-l-2 border-[#A8E6CF] pl-6 reveal-on-scroll delay-100">
+          <p class="text-4xl sm:text-5xl font-bold font-heading text-[#162420] counter-element" data-target="25"
+            data-suffix="+">0+</p>
+          <p class="text-sm text-[#4A5A53] font-medium">Dokter Spesialis Berpengalaman</p>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="space-y-2 border-l-2 border-[#CEF149] pl-6 reveal-on-scroll delay-200">
+          <p class="text-4xl sm:text-5xl font-bold font-heading text-[#162420] counter-element" data-target="15"
+            data-suffix="+">0+</p>
+          <p class="text-sm text-[#4A5A53] font-medium">Tahun Pengalaman Klinis</p>
+        </div>
+
+        <!-- Metric 4 -->
+        <div class="space-y-2 border-l-2 border-[#A8E6CF] pl-6 reveal-on-scroll delay-300">
+          <p class="text-4xl sm:text-5xl font-bold font-heading text-[#162420] counter-element" data-target="99.4"
+            data-suffix="%" data-decimals="1">0%</p>
+          <p class="text-sm text-[#4A5A53] font-medium">Tingkat Kepuasan Pasien</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: COMPREHENSIVE DENTAL SERVICES GRID
+       ========================================================================== -->
+  <section id="services" class="py-24 max-w-7xl mx-auto px-6 sm:px-8">
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-on-scroll">
+      <div>
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Layanan
+          Kami</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-[#162420] mt-3">
+          Perawatan Gigi <span class="underline decoration-[#CEF149]">Komprehensif</span>
+        </h2>
+      </div>
+      <p class="text-[#4A5A53] max-w-md text-sm sm:text-base">
+        Mulai dari estetika senyum hingga bedah restoratif, nikmati perawatan gigi tanpa rasa sakit yang dirancang
+        khusus demi kenyamanan Anda.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex items-center gap-3 overflow-x-auto pb-4 mb-10 no-scrollbar reveal-on-scroll delay-100">
+      <button class="filter-tab active" data-filter="all">Semua Perawatan</button>
+      <button class="filter-tab" data-filter="cosmetic">Estetika & Kosmetik</button>
+      <button class="filter-tab" data-filter="ortho">Ortodonti & Behel</button>
+      <button class="filter-tab" data-filter="surgery">Bedah & Implan</button>
+      <button class="filter-tab" data-filter="general">Perawatan Umum</button>
+    </div>
+
+    <!-- Services Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1: Teeth Whitening -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-100"
+        data-category="cosmetic">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&auto=format&fit=crop"
+              alt="Pemutihan Gigi Laser" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 1,5 Jt</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Estetika Gigi</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Pemutihan Gigi & Desain Senyum</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Perawatan pemutihan gigi laser modern yang mencerahkan warna enamel gigi hingga 8 tingkat lebih putih hanya
+            dalam 1 sesi (60 menit).
+          </p>
+        </div>
+        <button data-wa-treatment="Pemutihan Gigi & Desain Senyum"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Card 2: Invisible Orthodontics -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-200"
+        data-category="ortho">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&auto=format&fit=crop"
+              alt="Behel Transparan Invisalign" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 7,5 Jt</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Ortodonti</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Behel Transparan Invisalign</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Rangkaian aligner transparan buatan khusus untuk merapikan posisi gigi secara tak kasat mata tanpa kawat
+            atau braket logam.
+          </p>
+        </div>
+        <button data-wa-treatment="Behel Transparan Invisalign"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Card 3: Dental Implants -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-300"
+        data-category="surgery">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&auto=format&fit=crop"
+              alt="Implan Gigi" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 12 Jt</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Bedah Mulut</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Implan Gigi & Restorasi</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Penggantian gigi hilang permanen berbahan titanium berkualitas tinggi dengan tingkat keberhasilan 99.8% dan
+            ketahanan seumur hidup.
+          </p>
+        </div>
+        <button data-wa-treatment="Implan Gigi & Restorasi"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Card 4: Root Canal -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-100"
+        data-category="general">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=500&auto=format&fit=crop"
+              alt="Perawatan Saluran Akar" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 1,8 Jt</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Perawatan Umum</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Perawatan Saluran Akar (Root Canal)</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Terapi endodontik bebas nyeri menggunakan teknologi mikro-imaging presisi untuk menyelamatkan gigi
+            terinfeksi dan meredakan sakit gigi.
+          </p>
+        </div>
+        <button data-wa-treatment="Perawatan Saluran Akar (Root Canal)"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Card 5: Porcelain Veneers -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-200"
+        data-category="cosmetic">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&auto=format&fit=crop"
+              alt="Veneer Porselen" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 3,5 Jt</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Estetika Gigi</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Veneer Porselen & Smile Makeover</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Lapisan keramik ultra-tipis buatan tangan yang dipasang pada permukaan gigi untuk transformasi senyum
+            sempurna ala selebriti.
+          </p>
+        </div>
+        <button data-wa-treatment="Veneer Porselen & Smile Makeover"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Card 6: Pediatric Hygiene -->
+      <div
+        class="service-card bg-white rounded-3xl p-6 border border-[#E3EBE6] hover-lift flex flex-col justify-between reveal-on-scroll delay-300"
+        data-category="general">
+        <div>
+          <div class="relative rounded-2xl overflow-hidden h-48 mb-6 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&auto=format&fit=crop"
+              alt="Perawatan Gigi Anak" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] font-extrabold text-xs px-3 py-1.5 rounded-full shadow">Mulai
+              Rp 450 Rb</span>
+          </div>
+          <span class="text-xs font-semibold text-[#4A5A53] uppercase tracking-wider">Perawatan Umum</span>
+          <h3 class="text-xl font-bold font-heading text-[#162420] mt-1 mb-3">Perawatan Gigi Anak (Pediatric Care)</h3>
+          <p class="text-[#4A5A53] text-sm leading-relaxed mb-6">
+            Pemeriksaan dan perawatan pencegahan gigi anak yang ramah, lembut, dan menyenangkan untuk tumbuh kembang
+            gigi yang sehat.
+          </p>
+        </div>
+        <button data-wa-treatment="Perawatan Gigi Anak (Pediatric Care)"
+          class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <span>Pesan Perawatan</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: INTERACTIVE BEFORE & AFTER SMILE TRANSFORMATION SLIDER
+       ========================================================================== -->
+  <section id="transformation"
+    class="py-24 bg-gradient-to-b from-[#EBF7EF] via-[#FAFBF7] to-[#EBF7EF] text-[#162420] border-y border-[#E3EBE6]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 reveal-on-scroll">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Hasil
+          Nyata</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-[#162420]">
+          Galeri Transformasi <span class="underline decoration-[#CEF149]">Senyum</span>
+        </h2>
+        <p class="text-[#4A5A53] text-sm sm:text-base">
+          Geser slider visual di bawah ini untuk melihat perbandingan hasil nyata pasien sebelum dan sesudah perawatan
+          Veneer Porselen.
+        </p>
+      </div>
+
+      <!-- Before / After Interactive Component -->
+      <div class="max-w-4xl mx-auto space-y-8 reveal-on-scroll delay-100">
+        <div id="ba-container" class="ba-container">
+          <!-- SESUDAH Image (Base layer visible on the right) -->
+          <img src="assets/images/smile_after.png" alt="Senyum Sesudah Perawatan" class="ba-image-base">
+          <div
+            class="absolute top-4 right-4 bg-[#CEF149] text-[#162420] text-xs font-bold uppercase px-3 py-1.5 rounded-full z-10 shadow">
+            Sesudah</div>
+
+          <!-- SEBELUM Image Wrapper (Clipped top layer visible on the left) -->
+          <div id="ba-after-wrapper" class="ba-after-wrapper">
+            <img src="assets/images/smile_before.png" alt="Senyum Sebelum Perawatan" class="ba-image-after">
+            <div
+              class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-[#162420] text-xs font-bold uppercase px-3 py-1.5 rounded-full z-10 border border-[#E3EBE6] shadow-sm">
+              Sebelum</div>
+          </div>
+
+          <!-- Drag Slider Handle -->
+          <div id="ba-handle" class="ba-handle">
+            <div class="ba-handle-button">
+              <i class="fa-solid fa-arrows-left-right text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient Story Badges -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center reveal-on-scroll delay-200">
+          <div class="bg-white rounded-2xl p-4 border border-[#E3EBE6] shadow-sm">
+            <p class="text-xs text-[#4A5A53]">Rencana Perawatan</p>
+            <p class="text-sm font-bold text-[#162420] mt-1">6 Unit Veneer Porselen E-Max (Rp 21 Jt)</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-[#E3EBE6] shadow-sm">
+            <p class="text-xs text-[#4A5A53]">Durasi Total</p>
+            <p class="text-sm font-bold text-[#162420] mt-1">2 Kunjungan (5 Hari)</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-[#E3EBE6] shadow-sm">
+            <p class="text-xs text-[#4A5A53]">Kepuasan Pasien</p>
+            <p class="text-sm font-bold text-[#162420] mt-1">100% Kecerahan Alami</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: INTERACTIVE TREATMENT COST & BOOKING ESTIMATOR
+       ========================================================================== -->
+  <section id="estimator" class="py-24 max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="estimator-card p-8 sm:p-12 reveal-on-scroll">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left Explanatory Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Transparansi
+            Biaya</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading text-[#162420]">
+            Kalkulator Estimasi Biaya & <span class="underline decoration-[#CEF149]">Jadwal</span>
+          </h2>
+          <p class="text-[#4A5A53] text-sm sm:text-base leading-relaxed">
+            Pilih jenis perawatan gigi dan tingkat urgensi yang Anda butuhkan untuk menghitung estimasi biaya seketika
+            dan langsung pesan via WhatsApp.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3 text-sm text-[#162420] font-medium">
+              <span class="w-5 h-5 rounded-full bg-[#CEF149] flex items-center justify-center text-xs text-[#162420]"><i
+                  class="fa-solid fa-check text-[10px]"></i></span>
+              <span>Tanpa biaya tersembunyi</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#162420] font-medium">
+              <span class="w-5 h-5 rounded-full bg-[#CEF149] flex items-center justify-center text-xs text-[#162420]"><i
+                  class="fa-solid fa-check text-[10px]"></i></span>
+              <span>Fasilitas cicilan 0% hingga 12 bulan</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[#162420] font-medium">
+              <span class="w-5 h-5 rounded-full bg-[#CEF149] flex items-center justify-center text-xs text-[#162420]"><i
+                  class="fa-solid fa-check text-[10px]"></i></span>
+              <span>Konfirmasi jadwal instan via WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Calculator Controls -->
+        <div class="lg:col-span-7 bg-[#F0F7F2] rounded-2xl p-6 sm:p-8 border border-[#E3EBE6] space-y-6">
+
+          <!-- Dropdown 1: Select Treatment -->
+          <div class="space-y-2">
+            <label for="est-treatment" class="block text-xs font-bold uppercase tracking-wider text-[#4A5A53]">1. Pilih
+              Jenis Perawatan</label>
+            <select id="est-treatment"
+              class="w-full bg-white border border-[#D2DFD7] rounded-xl px-4 py-3.5 text-sm font-semibold text-[#162420] focus:outline-none focus:border-[#162420]">
+              <option value="whitening">Pemutihan Gigi & Desain Senyum</option>
+              <option value="invisalign">Behel Transparan Invisalign</option>
+              <option value="implants">Implan Gigi & Bedah Restoratif</option>
+              <option value="rootcanal">Perawatan Saluran Akar (Root Canal)</option>
+              <option value="veneers">Veneer Porselen & Smile Makeover</option>
+            </select>
+          </div>
+
+          <!-- Dropdown 2: Urgency Level -->
+          <div class="space-y-2">
+            <label for="est-urgency" class="block text-xs font-bold uppercase tracking-wider text-[#4A5A53]">2. Pilih
+              Urgensi / Jadwal Perawatan</label>
+            <select id="est-urgency"
+              class="w-full bg-white border border-[#D2DFD7] rounded-xl px-4 py-3.5 text-sm font-semibold text-[#162420] focus:outline-none focus:border-[#162420]">
+              <option value="standard">Jadwal Reguler (Dalam 7 Hari)</option>
+              <option value="fast">Jadwal Prioritas (Dalam 48 Jam)</option>
+              <option value="emergency">Perawatan Darurat Segera</option>
+            </select>
+          </div>
+
+          <!-- Display Output Card -->
+          <div
+            class="bg-white rounded-xl p-6 border-2 border-[#CEF149] flex flex-wrap items-center justify-between gap-4 shadow-md">
+            <div>
+              <p class="text-xs text-[#4A5A53] font-semibold uppercase tracking-wider">Estimasi Biaya Perawatan (IDR)
+              </p>
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-[#162420] mt-1">
+                <span id="est-price-min">Rp 1.500.000</span> - <span id="est-price-max">Rp 3.000.000</span>
+              </div>
+              <p class="text-xs text-[#4A5A53] mt-1">Durasi: <span id="est-duration" class="text-[#162420] font-bold">1
+                  Sesi (60 Menit)</span></p>
+            </div>
+
+            <a id="est-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+              class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold rounded-full py-3.5 px-6 text-sm flex items-center gap-2 shadow-lg hover:shadow-xl transition-all">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Pesan via WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: MEET OUR EXPERT DENTAL SPECIALISTS
+       ========================================================================== -->
+  <section id="specialists" class="py-24 bg-white border-y border-[#E3EBE6]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 reveal-on-scroll">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Tim
+          Medis</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-[#162420]">
+          Dokter Spesialis <span class="underline decoration-[#CEF149]">Berpengalaman</span>
+        </h2>
+        <p class="text-[#4A5A53] text-sm sm:text-base">
+          Tim dokter spesialis gigi bersertifikasi internasional kami memiliki pengalaman klinis lebih dari 15 tahun.
+        </p>
+      </div>
+
+      <!-- Doctor Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Doctor 1 -->
+        <div
+          class="bg-[#FAFBF7] rounded-3xl p-6 border border-[#E3EBE6] hover-lift text-center reveal-on-scroll delay-100">
+          <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&auto=format&fit=crop"
+              alt="drg. Alexander Vance, Sp.BM" class="w-full h-full object-cover">
+          </div>
+          <span
+            class="text-xs font-bold text-[#162420] uppercase tracking-wider bg-[#CEF149] px-3 py-1 rounded-full">Spesialis
+            Implan & Bedah</span>
+          <h3 class="text-2xl font-bold font-heading text-[#162420] mt-3">drg. Alexander Vance, Sp.BM</h3>
+          <p class="text-xs text-[#4A5A53] font-medium mt-1">Pengalaman 16+ Tahun • Fellow Johns Hopkins</p>
+          <p class="text-[#4A5A53] text-sm mt-4 leading-relaxed">
+            Spesialis dalam prosedur implan gigi minimal invasif, rekonstruksi mulut total, dan bedah mulut kompleks.
+          </p>
+          <button data-wa-treatment="Konsultasi drg. Alexander Vance, Sp.BM"
+            class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full mt-6 py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+            <span>Buat Janji Temu</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div
+          class="bg-[#FAFBF7] rounded-3xl p-6 border border-[#E3EBE6] hover-lift text-center reveal-on-scroll delay-200">
+          <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop"
+              alt="drg. Elena Rostova, Sp.Ort" class="w-full h-full object-cover">
+          </div>
+          <span
+            class="text-xs font-bold text-[#162420] uppercase tracking-wider bg-[#CEF149] px-3 py-1 rounded-full">Ketua
+            Tim Ortodontis</span>
+          <h3 class="text-2xl font-bold font-heading text-[#162420] mt-3">drg. Elena Rostova, Sp.Ort</h3>
+          <p class="text-xs text-[#4A5A53] font-medium mt-1">Pengalaman 12+ Tahun • Provider Resmi Invisalign</p>
+          <p class="text-[#4A5A53] text-sm mt-4 leading-relaxed">
+            Pakar perawatan merapikan gigi tanpa kawat (aligner transparan) dan perataan struktur rahang anak maupun
+            dewasa.
+          </p>
+          <button data-wa-treatment="Konsultasi drg. Elena Rostova, Sp.Ort"
+            class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full mt-6 py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+            <span>Buat Janji Temu</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div
+          class="bg-[#FAFBF7] rounded-3xl p-6 border border-[#E3EBE6] hover-lift text-center reveal-on-scroll delay-300">
+          <div class="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop"
+              alt="drg. Marcus Sterling, Sp.KG" class="w-full h-full object-cover">
+          </div>
+          <span
+            class="text-xs font-bold text-[#162420] uppercase tracking-wider bg-[#CEF149] px-3 py-1 rounded-full">Arsitek
+            Estetika Gigi</span>
+          <h3 class="text-2xl font-bold font-heading text-[#162420] mt-3">drg. Marcus Sterling, Sp.KG</h3>
+          <p class="text-xs text-[#4A5A53] font-medium mt-1">Pengalaman 10+ Tahun • Master Aesthetic Dentistry</p>
+          <p class="text-[#4A5A53] text-sm mt-4 leading-relaxed">
+            Ahli dalam desain senyum digital (Digital Smile Design), veneer keramik buatan tangan, dan restorasi
+            estetika gigi.
+          </p>
+          <button data-wa-treatment="Konsultasi drg. Marcus Sterling, Sp.KG"
+            class="bg-[#CEF149] hover:bg-[#bde62b] text-[#162420] font-extrabold w-full mt-6 py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all">
+            <span>Buat Janji Temu</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: PATIENT REVIEWS & TESTIMONIAL CAROUSEL
+       ========================================================================== -->
+  <section class="py-24 max-w-7xl mx-auto px-6 sm:px-8">
+
+    <!-- Header Controls -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-on-scroll">
+      <div>
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Testimoni
+          Pasien</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-[#162420] mt-3">
+          Kata Mereka Tentang <span class="underline decoration-[#CEF149]">Dentiva</span>
+        </h2>
+      </div>
+
+      <!-- Carousel Arrow Controls -->
+      <div class="flex items-center gap-3">
+        <button id="test-prev" aria-label="Testimoni Sebelumnya"
+          class="w-12 h-12 rounded-full border border-[#D2DFD7] flex items-center justify-center hover:bg-[#CEF149] transition"><i
+            class="fa-solid fa-arrow-left text-sm"></i></button>
+        <button id="test-next" aria-label="Testimoni Selanjutnya"
+          class="w-12 h-12 rounded-full border border-[#D2DFD7] flex items-center justify-center hover:bg-[#CEF149] transition"><i
+            class="fa-solid fa-arrow-right text-sm"></i></button>
+      </div>
+    </div>
+
+    <!-- Testimonial Track -->
+    <div id="testimonial-track"
+      class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 reveal-on-scroll delay-100">
+
+      <!-- Review 1 -->
+      <div
+        class="min-w-[320px] sm:min-w-[380px] bg-white rounded-3xl p-8 border border-[#E3EBE6] flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <div class="flex text-[#162420] text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-[#162420] text-base leading-relaxed italic">
+            "Saya sempat sangat cemas setiap kali harus ke dokter gigi, tapi drg. Alexander dan tim membuat perawatan
+            veneer saya benar-benar bebas rasa sakit. Sekarang saya jauh lebih percaya diri!"
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
+          <img class="w-12 h-12 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop"
+            alt="Sarah Jenkins">
+          <div>
+            <p class="font-bold text-sm text-[#162420]">Sarah Jenkins</p>
+            <p class="text-xs text-[#4A5A53]">Pasien Terverifikasi • Veneer Porselen</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div
+        class="min-w-[320px] sm:min-w-[380px] bg-white rounded-3xl p-8 border border-[#E3EBE6] flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <div class="flex text-[#162420] text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-[#162420] text-base leading-relaxed italic">
+            "Perawatan Invisalign bersama drg. Elena hanya butuh waktu 5 bulan! Suasana kliniknya sangat mewah, stafnya
+            ramah, dan booking via WhatsApp sangat cepat."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
+          <img class="w-12 h-12 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&auto=format&fit=crop"
+            alt="Michael Chang">
+          <div>
+            <p class="font-bold text-sm text-[#162420]">Michael Chang</p>
+            <p class="text-xs text-[#4A5A53]">Pasien Terverifikasi • Behel Invisalign</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div
+        class="min-w-[320px] sm:min-w-[380px] bg-white rounded-3xl p-8 border border-[#E3EBE6] flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <div class="flex text-[#162420] text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-[#162420] text-base leading-relaxed italic">
+            "Pemasangan 2 implan gigi dilakukan hanya dalam satu kali kunjungan. Tidak ada rasa sakit setelahnya!
+            Dentiva benar-benar standar tertinggi klinik gigi modern."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
+          <img class="w-12 h-12 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop"
+            alt="Amanda Miller">
+          <div>
+            <p class="font-bold text-sm text-[#162420]">Amanda Miller</p>
+            <p class="text-xs text-[#4A5A53]">Pasien Terverifikasi • Implan Gigi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div
+        class="min-w-[320px] sm:min-w-[380px] bg-white rounded-3xl p-8 border border-[#E3EBE6] flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <div class="flex text-[#162420] text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-[#162420] text-base leading-relaxed italic">
+            "Perawatan laser teeth whitening memberikan hasil putih bersih seketika sebelum hari pernikahan saya. Sangat
+            cepat, ramah, dan kliniknya nyaman sekali!"
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
+          <img class="w-12 h-12 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=120&auto=format&fit=crop"
+            alt="David Sterling">
+          <div>
+            <p class="font-bold text-sm text-[#162420]">David Sterling</p>
+            <p class="text-xs text-[#4A5A53]">Pasien Terverifikasi • Pemutihan Gigi</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 8: FAQ ACCORDION
+       ========================================================================== -->
+  <section id="faq" class="py-24 bg-white border-t border-[#E3EBE6]">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8">
+
+      <!-- Section Title -->
+      <div class="text-center mb-16 space-y-4 reveal-on-scroll">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-[#162420] bg-[#CEF149] px-3 py-1.5 rounded-full">Pertanyaan
+          Umum</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-[#162420]">
+          Pertanyaan Yang Sering <span class="underline decoration-[#CEF149]">Diajukan</span>
+        </h2>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="space-y-4 reveal-on-scroll delay-100">
+
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item active bg-[#FAFBF7] rounded-2xl px-6 border border-[#E3EBE6]">
+          <button class="accordion-header">
+            <span>Apa yang akan saya dapatkan saat konsultasi gigi pertama kali?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-plus text-xs"></i></span>
+          </button>
+          <div class="accordion-content">
+            Saat kunjungan pertama, dokter spesialis kami akan melakukan pemindaian 3D oral digital, analisis radiologi
+            X-ray dosis rendah, serta konsultasi estetika personal untuk merancang rencana perawatan terbaik Anda.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item bg-[#FAFBF7] rounded-2xl px-6 border border-[#E3EBE6]">
+          <button class="accordion-header">
+            <span>Metode pembayaran dan asuransi apa saja yang diterima?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-plus text-xs"></i></span>
+          </button>
+          <div class="accordion-content">
+            Kami bekerjasama dengan berbagai penyedia asuransi kesehatan utama serta menyediakan fasilitas cicilan 0% (3
+            hingga 12 bulan) untuk prosedur estetika maupun bedah.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item bg-[#FAFBF7] rounded-2xl px-6 border border-[#E3EBE6]">
+          <button class="accordion-header">
+            <span>Bagaimana jaminan Perawatan Tanpa Rasa Sakit (Pain-Free Care) bekerja?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-plus text-xs"></i></span>
+          </button>
+          <div class="accordion-content">
+            Kami menggunakan teknologi anestesi lokal terkomputerisasi, pilihan sedasi gas (nitrous oxide), serta
+            prosedur laser presisi untuk memastikan Anda merasa nyaman dan bebas dari rasa cemas.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item bg-[#FAFBF7] rounded-2xl px-6 border border-[#E3EBE6]">
+          <button class="accordion-header">
+            <span>Berapa lama rata-rata perawatan Behel Transparan Invisalign berlangsung?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-plus text-xs"></i></span>
+          </button>
+          <div class="accordion-content">
+            Sebagian besar perawatan Invisalign dewasa mencapai kerapian ideal dalam 4 hingga 8 bulan tergantung tingkat
+            kompleksitas, dengan perubahan visual yang mulai terlihat sejak 6 minggu pertama.
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item bg-[#FAFBF7] rounded-2xl px-6 border border-[#E3EBE6]">
+          <button class="accordion-header">
+            <span>Bagaimana cara mudah memesan jadwal konsultasi?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-plus text-xs"></i></span>
+          </button>
+          <div class="accordion-content">
+            Anda cukup mengklik tombol "Buat Janji Temu" atau "Jadwalkan Konsultasi" pada website untuk terhubung
+            langsung dengan tim Customer Care kami di WhatsApp.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 9: FREE CONSULTATION CTA BANNER
+       ========================================================================== -->
+  <section class="py-16 px-6 sm:px-8 max-w-7xl mx-auto reveal-on-scroll">
+    <div
+      class="bg-[#CEF149] rounded-3xl p-10 sm:p-16 text-[#162420] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+      <div class="space-y-4 max-w-2xl text-center lg:text-left">
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading leading-tight">
+          Punya Pertanyaan? Dapatkan Konsultasi Gigi Gratis
+        </h2>
+        <p class="text-[#162420]/80 text-base font-medium">
+          Konsultasikan kebutuhan gigi Anda secara langsung dengan tim care coordinator kami hari ini dan wujudkan
+          senyum sehat impian Anda.
+        </p>
+      </div>
+
+      <a href="https://wa.me/6285150688320?text=Halo%20Dentiva,%20saya%20ingin%20konsultasi%20gratis..." target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#162420] hover:bg-black text-[#CEF149] font-extrabold rounded-full py-4 px-8 text-base whitespace-nowrap shadow-2xl transition-all flex items-center gap-3">
+        <span>Konsultasi Gratis</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 10: FOOTER & STICKY WHATSAPP ACTION BAR
+       ========================================================================== -->
+  <footer class="bg-[#EBF7EF] text-[#162420] pt-20 pb-12 border-t border-[#D2DFD7]">
+    <div
+      class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-[#D2DFD7]">
+
+      <!-- Column 1: Brand Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <a href="#" class="flex items-center gap-3 text-2xl font-bold font-heading">
+          <img src="assets/images/logo.svg" alt="Dentiva Logo" class="w-9 h-9 rounded-xl shadow">
+          <span class="text-[#162420]">Dentiva<span class="text-[#CEF149]">.</span></span>
+        </a>
+        <p class="text-[#4A5A53] text-sm leading-relaxed max-w-sm">
+          Dentiva adalah klinik gigi modern terkemuka yang menghadirkan desain senyum presisi, pemutihan gigi laser, dan
+          perawatan restoratif tanpa rasa sakit.
+        </p>
+        <div class="flex items-center gap-4 text-[#162420]">
+          <a href="#" aria-label="Instagram"
+            class="w-9 h-9 rounded-full bg-white flex items-center justify-center border border-[#D2DFD7] hover:bg-[#CEF149] transition"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"
+            class="w-9 h-9 rounded-full bg-white flex items-center justify-center border border-[#D2DFD7] hover:bg-[#CEF149] transition"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"
+            class="w-9 h-9 rounded-full bg-white flex items-center justify-center border border-[#D2DFD7] hover:bg-[#CEF149] transition"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"
+            class="w-9 h-9 rounded-full bg-white flex items-center justify-center border border-[#D2DFD7] hover:bg-[#CEF149] transition"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-[#162420]">Tautan Cepat</h4>
+        <ul class="space-y-2.5 text-sm text-[#4A5A53]">
+          <li><a href="#home" class="hover:text-[#162420] transition">Beranda</a></li>
+          <li><a href="#services" class="hover:text-[#162420] transition">Perawatan Kami</a></li>
+          <li><a href="#transformation" class="hover:text-[#162420] transition">Hasil Transformasi</a></li>
+          <li><a href="#specialists" class="hover:text-[#162420] transition">Tim Dokter Spesialis</a></li>
+          <li><a href="#estimator" class="hover:text-[#162420] transition">Estimator Biaya</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Treatments -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-[#162420]">Layanan Utama</h4>
+        <ul class="space-y-2.5 text-sm text-[#4A5A53]">
+          <li><a href="#services" class="hover:text-[#162420] transition">Pemutihan Gigi Laser</a></li>
+          <li><a href="#services" class="hover:text-[#162420] transition">Behel Transparan Invisalign</a></li>
+          <li><a href="#services" class="hover:text-[#162420] transition">Implan Gigi Titanium</a></li>
+          <li><a href="#services" class="hover:text-[#162420] transition">Veneer Porselen</a></li>
+          <li><a href="#services" class="hover:text-[#162420] transition">Perawatan Saluran Akar</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact & Hours -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-[#162420]">Jam Operasional & Lokasi</h4>
+        <ul class="space-y-2.5 text-sm text-[#4A5A53]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-[#162420]"></i> Sen - Sab: 08:00 - 20:00
+            WIB</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-calendar-xmark text-[#162420]"></i> Minggu: Khusus
+            Layanan Darurat</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-[#162420]"></i> +62 851-5068-8320</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#162420]"></i>
+            kontak@dentiva-clinic.com</li>
+          <li class="pt-2">
+            <a href="https://maps.google.com" target="_blank"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-[#162420] underline hover:text-black">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Lihat Lokasi di Google Maps</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 sm:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#4A5A53] gap-4">
+      <p>© 2026 Klinik Gigi Dentiva. Seluruh Hak Cipta Dilindungi.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-[#162420]">Kebijakan Privasi</a>
+        <a href="#" class="hover:text-[#162420]">Syarat & Ketentuan</a>
+        <a href="#" class="hover:text-[#162420]">Hak Pasien</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Floating WhatsApp Action Button (Bottom Right) -->
+  <a href="https://wa.me/6285150688320?text=Halo%20Dentiva,%20saya%20ingin%20booking%20jadwal%20konsultasi..."
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- JavaScript Bundle -->
+  <script src="main.js"></script>
 </body>
+
 </html>
