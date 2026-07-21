@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #D9C5B2; /* Warm beige */
+    --secondary-color: #348AA7; /* Soft teal */
+    --text-dark: #2C3E50;
+    --text-light: #F8F9FA;
+    --bg-color: #FDFBF7; /* Off-white warm */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
