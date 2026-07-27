@@ -102,17 +102,17 @@ const HERO_SLIDES = [
   },
   {
     img: 'assets/images/hero_slide_2.png',
-    caption: 'Transformasi Pemutihan Gigi Laser (Teeth Whitening)',
+    caption: 'Pembersihan Karang Gigi & Perawatan Rutin',
     counter: 'Pratinjau 02 / 04'
   },
   {
     img: 'assets/images/hero_slide_3.png',
-    caption: 'Behel Transparan Invisalign Senyum Rapi Tak Kasat Mata',
+    caption: 'Behel Gigi Konvensional untuk Senyum Rapi',
     counter: 'Pratinjau 03 / 04'
   },
   {
     img: 'assets/images/hero_slide_4.png',
-    caption: 'Konsultasi Perawatan Veneer Porselen & Restorasi Gigi',
+    caption: 'Konsultasi Perawatan & Penambalan Gigi Estetis',
     counter: 'Pratinjau 04 / 04'
   }
 ];
@@ -372,36 +372,41 @@ function initServiceFilter() {
 /* ==========================================================================
    3. Treatment Cost & Booking Estimator Widget (Indonesian Market Prices IDR)
    ========================================================================== */
-const TREATMENT_DATA = {
-  whitening: {
-    name: 'Pemutihan Gigi & Desain Senyum',
-    basePriceMin: 1500000,
-    basePriceMax: 3000000,
-    duration: '1 Sesi (60 Menit)'
+/**
+ * Variable Jumlah Pasien Terpisah untuk Akses & Perubahan Mudah
+ */
+const PATIENT_COUNT = (typeof CLINIC_CONFIG !== 'undefined' && CLINIC_CONFIG.patientCount) ? CLINIC_CONFIG.patientCount : '500+';
+
+const TREATMENT_DATA = (typeof CLINIC_CONFIG !== 'undefined' && CLINIC_CONFIG.estimator) ? CLINIC_CONFIG.estimator : {
+  scaling: {
+    name: 'Scaling Gigi & Pembersihan Karang',
+    basePriceMin: 150000,
+    basePriceMax: 350000,
+    duration: '1 Sesi (30-45 Menit)'
   },
-  invisalign: {
-    name: 'Behel Transparan Invisalign',
-    basePriceMin: 7500000,
-    basePriceMax: 18000000,
-    duration: '3 - 6 Bulan'
+  filling: {
+    name: 'Tambal Gigi Komposit Estetis',
+    basePriceMin: 200000,
+    basePriceMax: 450000,
+    duration: '1 Sesi (45 Menit)'
   },
-  implants: {
-    name: 'Implan Gigi & Bedah Restoratif',
-    basePriceMin: 12000000,
-    basePriceMax: 25000000,
-    duration: '2 - 3 Kunjungan'
+  extraction: {
+    name: 'Cabut Gigi (Eksodontia)',
+    basePriceMin: 250000,
+    basePriceMax: 600000,
+    duration: '1 Sesi (30-60 Menit)'
   },
-  rootcanal: {
-    name: 'Perawatan Saluran Akar (Root Canal)',
-    basePriceMin: 1800000,
-    basePriceMax: 4500000,
-    duration: '1 - 2 Kunjungan'
-  },
-  veneers: {
-    name: 'Veneer Porselen & Smile Makeover',
+  braces: {
+    name: 'Behel Konvensional (Behel Gigi)',
     basePriceMin: 3500000,
-    basePriceMax: 9000000,
-    duration: '2 Kunjungan'
+    basePriceMax: 6500000,
+    duration: 'Pemasangan + Kontrol Rutin'
+  },
+  whitening: {
+    name: 'Pemutihan Gigi (Bleaching)',
+    basePriceMin: 1200000,
+    basePriceMax: 2500000,
+    duration: '1 Sesi (60 Menit)'
   }
 };
 
@@ -429,7 +434,7 @@ function initCostEstimator() {
     const selectedTreatmentKey = treatmentSelect.value;
     const selectedUrgencyKey = urgencySelect.value;
 
-    const treatment = TREATMENT_DATA[selectedTreatmentKey] || TREATMENT_DATA.whitening;
+    const treatment = TREATMENT_DATA[selectedTreatmentKey] || TREATMENT_DATA.scaling || Object.values(TREATMENT_DATA)[0];
     const urgency = URGENCY_MULTIPLIER[selectedUrgencyKey] || URGENCY_MULTIPLIER.standard;
 
     const minPrice = Math.round(treatment.basePriceMin * urgency.factor);
